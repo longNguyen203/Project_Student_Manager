@@ -5,19 +5,22 @@ class StudentManager:
     
     list_Student: list[Student] = []
     
-    def frameField(self) -> str:
+    def frameField(self) -> None:
         print("{:<8}{:<25}{:<9}{:<6}{:<25}{:<10}".format("ID", "Ten", "NamSinh", "Khoa", "Major", "GPA"))
     
     def addStudent(self) -> None:
         
         print("*** Them Sinh Vien ***")
         
-        id = input("-->ID: ")
-        ten = input("-->Ten: ")
-        namSinh = int(input("-->NamSinh: "))
-        khoa = int(input("-->Khoa: "))
-        major = input("-->Major: ")
-        GPA = float(input("-->GPA: "))
+        try:
+            id = input("-->ID: ")
+            ten = input("-->Ten: ")
+            namSinh = int(input("-->NamSinh: "))
+            khoa = int(input("-->Khoa: "))
+            major = input("-->Major: ")
+            GPA = float(input("-->GPA: "))
+        except ValueError:
+            print("Loi! Dau vao khong hop le!!!!")
         
         StudentManager.list_Student.append(Student(id, ten, namSinh, khoa, major, GPA))
         

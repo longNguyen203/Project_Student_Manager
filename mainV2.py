@@ -1,4 +1,4 @@
-from Student.StudentManager import StudentManager
+from StudentV2.StudentManager import StudentManager
 import os
 
 def Menu():
@@ -13,19 +13,19 @@ def main() -> None:
     student = StudentManager()
     Menu()
     while True:
-        select = int(input("Choose select: "))
+        select = (input("Choose select: "))
         os.system('cls')
-        if select == 1:
+        if select == "1":
             student.addStudent()
-        elif select == 2:
+        elif select == "2":
             student.printStudent()
-        elif select == 3:
+        elif select == "3":
             student.deleteStudent()
-        elif select == 4:
-            student.editStudent()
-        elif select == 5:
-            student.findStudent()
-        elif select == 0:
+        # elif select == 4:
+        #     student.editStudent()
+        # elif select == 5:
+        #     student.findStudent()
+        elif select == "0":
             Menu()
         else:
             print("Thoat Thành Cong")
