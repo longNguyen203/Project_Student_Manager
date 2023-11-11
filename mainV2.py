@@ -13,7 +13,7 @@ def main() -> None:
     student = StudentManager()
     Menu()
     while True:
-        select = (input("Choose select: "))
+        select = (input("-->Choose select: "))
         os.system('cls')
         if select == "1":
             student.addStudent()
@@ -21,15 +21,15 @@ def main() -> None:
             student.printStudent()
         elif select == "3":
             student.deleteStudent()
-        # elif select == 4:
-        #     student.editStudent()
-        # elif select == 5:
-        #     student.findStudent()
+        elif select == "4":
+            student.editStudent()
+        elif select == "5":
+            student.findStudent()
         elif select == "0":
             Menu()
         else:
-            print("Thoat Thành Cong")
-            break
+            print("*** Thoat Thành Cong ***")
+            return
 
 if __name__ == "__main__":
     main()
